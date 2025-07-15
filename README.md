@@ -166,30 +166,50 @@ plt.show()
 
 bikes_df["ProductColor"].mode()
 
-#bikes_df.fillna()
+bikes_df = bikes_df.fillna("Black")
+
+bikes_df
 ```
 
+```python
+# to verify that there are no more missing values on our dataset
 
+bikes_df.isna().any()
 
+```
+- **3. Check for  Duplicates*
 
+```python
 
+# solution
 
+# counting the total number of our datapoint
 
+len(bikes_df)
+```
+```python
+bikes_cleaned_data_df = bikes_df.drop_duplicates()
 
+bikes_cleaned_data_df
+```
 
+```python
+# dropping any duplicates if any exists 
 
+bikes_df.drop_duplicates(inplace = True)
+```
 
+- **4. Handling Duplicates**:
 
+```python
+# solution
 
+# re-counting our datapoint
 
+len(bikes_df)
 
-
-
-
-
-
-
-
+# This shows that there was NO duplicates on our dataset
+```
 
 
 
